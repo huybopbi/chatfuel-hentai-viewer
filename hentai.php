@@ -5,8 +5,10 @@
 require('vendor/autoload.php');
 
 $curl = new Curl\Curl();
+$curl->setUserAgent('Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1');
 
-$curl->get('http://gingcs.7m.pl/hentai');
+
+$curl->get('http://gingcs.7m.pl/hentai/');
 
 $result = json_decode($curl->response, true);
 
